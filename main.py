@@ -66,7 +66,7 @@ board = {
 import random
 b = "_"
 x = random.choice(words)
-print("Let's play hangman: ")
+print("Let's play hangman, I have chosen a word.")
 print(board[0])
 lives = 6
 print(x)
@@ -85,7 +85,7 @@ while lives > 0:
     n = str(input("Give me a letter: ")).lower()
     used_letters.append(n)
   if c == x:
-      print("YOU WIN! Good Job! ")
+      print("You have won!")
       break
   if n in list(d):
     i = int(d.index(n))
@@ -100,7 +100,7 @@ while lives > 0:
         index += 0
         print(board[index])
   else:
-    aa = print(str(n),"is not in this word! ")
+    aa = print(str(n),"is not in the word! ")
     used_letters.append(aa)
     f += 1
     lives -= 1
@@ -110,4 +110,4 @@ while lives > 0:
 
 
 if lives == 0:
-    print("You ran outa lives! GG ")
+    print("You ran out of lives!")
